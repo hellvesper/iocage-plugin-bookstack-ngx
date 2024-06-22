@@ -1,0 +1,42 @@
+{
+  "name": "bookstack-ngx",
+  "release": "13.2-RELEASE",
+  "branch": "13.2-RELEASE",
+  "artifact": "https://github.com/hellvesper/iocage-plugin-bookstack-ngx.git",
+  "official": false,
+  "plugin_schema": "2",
+  "properties": {
+    "dhcp": 1
+  },
+  "pkgs": [
+    "mariadb1011-server",
+    "php83",
+    "php83-dom",
+    "php83-fileinfo",
+    "php83-gd",
+    "php83-session",
+    "php83-tokenizer",
+    "php83-iconv",
+    "php83-xml",
+    "php83-simplexml",
+    "php83-pdo",
+    "php83-pdo_mysql",
+    "php83-composer",
+    "nginx",
+
+    "sudo",
+    "nginx",
+    "git",
+    "mDNSResponder"
+  ],
+  "packagesite": "https://pkg.freebsd.org/${ABI}/latest",
+  "fingerprints": {
+    "iocage-plugins": [
+      {
+        "function": "sha256",
+        "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+      }
+    ]
+  },
+  "revision": 0
+}

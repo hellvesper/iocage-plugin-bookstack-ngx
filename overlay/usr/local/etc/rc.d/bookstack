@@ -1,0 +1,17 @@
+#!/bin/sh
+# PROVIDE: paperless          
+# REQUIRE: DAEMON redis
+# KEYWORD: shutdown
+. /etc/rc.subr
+name="paperless"
+rcvar="${name}_enable"
+procname="daemon"
+pidfile="/var/run/${name}.pid"
+command="/usr/sbin/daemon"
+command_args="-f -P ${pidfile} -u paperless /usr/local/sbin/${name}"
+stop_cmd=paperless_stop
+paperless_stop() {
+    killall -u paperless
+}
+load_rc_config $name
+run_rc_command "$1"

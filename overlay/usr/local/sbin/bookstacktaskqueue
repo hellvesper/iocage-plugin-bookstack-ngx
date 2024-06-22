@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# . /usr/home/paperless/venv/bin/activate
+cd /usr/home/paperless/paperless-ngx/src
+python3.11 -m celery --app paperless worker --loglevel INFO

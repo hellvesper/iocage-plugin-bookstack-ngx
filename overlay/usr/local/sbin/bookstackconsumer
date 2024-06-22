@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# . /usr/home/paperless/venv/bin/activate
+cd /usr/home/paperless/paperless-ngx/src
+exec python3.11 manage.py document_consumer
